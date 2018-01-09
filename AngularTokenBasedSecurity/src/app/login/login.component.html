@@ -1,0 +1,50 @@
+<h3 style="text-align:center">Angular Token Based Security Test</h3>
+<form action="" id='myForm' [formGroup]='myGroup'>
+  <mat-card class='Card'>
+    <mat-card-header>
+      <mat-card-title>
+        <strong>Login</strong>
+      </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+
+      <mat-form-field>
+        <input matInput placeholder="Email" [value]='' required formControlName='email'>
+        <mat-error *ngIf='myGroup.controls["email"].invalid'>
+          <div *ngIf='myGroup.controls["email"].hasError("required")'>
+            Email is required
+          </div>
+          <div *ngIf='myGroup.controls["email"].hasError("email") && !myGroup.controls["email"].hasError("required")'>
+            Not a valid email address
+          </div>
+        </mat-error>
+      </mat-form-field>
+      <br/>
+
+      <mat-form-field>
+        <input type="password" matInput required formControlName='password'>
+        <mat-placeholder>Password</mat-placeholder>
+        <mat-error *ngIf='myGroup.controls["password"].invalid'>
+          <div *ngIf='myGroup.controls["password"].hasError("required")'>
+            Password is required
+          </div>
+          <div *ngIf='myGroup.controls["password"].hasError("minlength")'>
+            Password is at least 8 characters
+          </div>
+        </mat-error>
+      </mat-form-field>
+
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color='primary' (click)='btnLogin()'>Login</button>
+
+      <button mat-raised-button type="button" color='warn' (click)='btnRegister()'>
+        New User
+      </button>
+
+    </mat-card-actions>
+
+  </mat-card>
+</form>

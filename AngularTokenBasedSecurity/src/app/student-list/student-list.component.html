@@ -1,0 +1,37 @@
+<mat-table #table [dataSource]="data">
+  <ng-container matColumnDef="studentId">
+    <mat-header-cell *matHeaderCellDef> Student ID </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.StudentId}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="firstName">
+    <mat-header-cell *matHeaderCellDef> First Name </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.FirstName}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="lastName">
+    <mat-header-cell *matHeaderCellDef> Last Name </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.LastName}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="street">
+    <mat-header-cell *matHeaderCellDef> Street </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.Street}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="city">
+    <mat-header-cell *matHeaderCellDef> City </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.City}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="state">
+    <mat-header-cell *matHeaderCellDef> State </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.State}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="email">
+    <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.Email}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="telephone">
+    <mat-header-cell *matHeaderCellDef> Telephone </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.Telephone}} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayColumns"></mat-header-row>
+  <mat-row *matRowDef="let myRowData; columns: displayColumns"></mat-row>
+</mat-table>
