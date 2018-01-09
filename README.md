@@ -22,17 +22,17 @@ My custom password validator:
 
 
 
-![image](https://github.com/xky0007/Angular-Token-Based-Security/tree/master/Screenshots/Register.jpg)
+![image](https://github.com/xky0007/Angular-Token-Based-Security/blob/master/Screenshots/Register.jpg)
 
 After we create an account, it will redirct to login page (if you registered before, login directly).
 
 
-![image](https://github.com/xky0007/Angular-Token-Based-Security/tree/master/Screenshots/RegisterSuccessful.jpg)
+![image](https://github.com/xky0007/Angular-Token-Based-Security/blob/master/Screenshots/RegisterSuccessful.jpg)
 
 With Fiddler, we can see we get the token from the web api server. Double check in the browser, they have the same value with the key 'myToken'. We can define the key as we wish.
 
-![image](https://github.com/xky0007/Angular-Token-Based-Security/tree/master/Screenshots/Token1.jpg)
-![image](https://github.com/xky0007/Angular-Token-Based-Security/tree/master/Screenshots/Token2.jpg)
+![image](https://github.com/xky0007/Angular-Token-Based-Security/blob/master/Screenshots/Token1.jpg)
+![image](https://github.com/xky0007/Angular-Token-Based-Security/blob/master/Screenshots/Token2.jpg)
 
 Here is the code for http interceptor. Unless we register or login, each http request will be modified by adding the authorization token to the header, otherwise the web api will reject the request because the HttpGet api has Authorize attribute.
 
@@ -145,9 +145,9 @@ Diplay data in the angular material table.
     </mat-table>
 
 
-![image](https://github.com/xky0007/Angular-Token-Based-Security/tree/master/Screenshots/Data1.jpg)
+![image](https://github.com/xky0007/Angular-Token-Based-Security/blob/master/Screenshots/Data1.jpg)
 
-![image](https://github.com/xky0007/Angular-Token-Based-Security/tree/master/Screenshots/Data.jpg)
+![image](https://github.com/xky0007/Angular-Token-Based-Security/blob/master/Screenshots/Data.jpg)
 
 
 Summary:
